@@ -1,29 +1,21 @@
 package com.practice.logicalprograms;
 
-import java.util.Scanner;
-
 public class Prime_Number {
-	public static void main(String arg[])	
-	{
+	public static void main(String[] args) {
 
-		System.out.println("Enter a number ");
-		Scanner sc = new Scanner(System.in);
-		int n=sc.nextInt();
-		primeCal(n);
+	    int num = 29;
+	    boolean b = false;
+	    for (int i = 2; i <= num / 2; ++i) {
+	      // condition for nonprime number
+	      if (num % i == 0) {
+	        b = true;
+	        break;
+	      }
+	    }
+
+	    if (!b)
+	      System.out.println(num + " is a prime number.");
+	    else
+	      System.out.println(num + " is not a prime number.");
+	  }
 	}
-	static void primeCal(int num)
-	{
-		int count=0;
-		for(int i=1;i<=num;i++)
-		{
-			if(num%i==0)
-			{
-				count++;	        
-			}
-		}
-		if(count==2)
-			System.out.println("prime number ");
-		else
-			System.out.println("Not a prime number ");        
-	} 
-}

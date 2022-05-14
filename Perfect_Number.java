@@ -1,27 +1,19 @@
 package com.practice.logicalprograms;
 
-import java.util.Scanner;
-
 public class Perfect_Number {
 	public static void main(String args[])    
 	{  
-		long n, sum=0;  
-		Scanner sc = new Scanner(System.in);         
-		System.out.print("Enter the number: ");  
-		n=sc.nextLong();  
+		long n = 52, sum=0;   
 		int i=1;  
-
 		while(i <= n/2)  
 		{  
 			if(n % i == 0) {
-				  
 				sum = sum + i;  
 			}  
 			i++;  
 		} 
 
-		if(sum==n) { 
-
+		if(sum==n) {
 			System.out.println(n+" is a perfect number.");  
 		} 
 		else  
